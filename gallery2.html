@@ -20,39 +20,41 @@
 
 	<div class="gallery">
 		<div class="gallery-item">
-			<img src="treadmill.jpeg.jpg">
+			<img src="treadmill.jpeg.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  border="0">
 			<h3>Image 1</h3>
 		</div>
 		<div class="gallery-item">
-			<img src="ramondino.jpeg.jpg">
+			<img src="ramondino.jpeg.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  border="0">
 			<h3>Image 2</h3>
 		</div>
 		<div class="gallery-item">
-			<img src="biceps.jpeg.jpg">
+			<img src="biceps.jpeg.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  border="0">
 			<h3>Image 3</h3>
 		</div>
 		<div class="gallery-item">
-			<img src="cbum.jpg">
+			<img src="cbum.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  border="0">
 			<h3>Image 4</h3>
 		</div>
 		<div class="gallery-item">
-			<img src="bisposecbum.jpeg.jpg">
+			<img src="bisposecbum.jpeg.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  border="0">
 			<h3>Image 5</h3>
 		</div>
-		<div class="gallery-item">
-			<img src="laidabs.jpeg.jpg">
+		<div class="gallery-item" >
+			<img src="laidabs.jpeg.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  border="0">
 			<h3>Image 6</h3>
 		</div>
 	</div>
 
 	<script type="text/javascript">
-		const galleryItems = document.querySelectorAll('.gallery-item');
+		function bigImg(x){
+			x.style.height="400px";
+			x.style.width="400px";
+		}
 
-		galleryItems.forEach(item => {
-			item.addEventListener('click', () => {
-				item.classList.toggle('active');
-			});
-		});
+		function normalImg(x){
+			x.style.height="350px";
+			x.style.width="350px";
+		}
 	</script>
 
 </body>
