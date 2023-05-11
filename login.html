@@ -1,0 +1,114 @@
+=
+    <!DOCTYPE html>
+<html>
+<head>
+	<title>Gym Management Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!DOCTYPE html>
+    <meta charset="UTF-8">
+   <title>Navigation Bar</title>
+   <style>
+     /* CSS styles for the navigation bar */
+     ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the link color on hover */
+    li a:hover {
+      background-color: #111;
+    }
+
+    /* CSS styles for responsive navigation bar */
+    @media screen and (max-width: 600px) {
+      ul {
+        position: relative;
+      }
+      
+      li {
+        display: block;
+        float: none;
+      }
+      
+      li a {
+        display: inline-block;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="gallery2.html">gallery</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <!-- JavaScript to make navigation bar responsive -->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myNav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+  </script>
+	<h2>Login here</h2>
+	<div class="login-box">
+
+		
+		<form>
+			
+			<div class="user-box">
+				<input type="text" name="" required="">
+				<label>Username</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="" required="">
+				<label>Password</label>
+			</div>
+			<a href="#">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<input type="submit" name="" value="Submit">
+			</a>
+		</form>
+	</div>
+	<script>
+        // Get the input elements and their values
+        const usernameInput = document.querySelector('input[name="username"]');
+        const passwordInput = document.querySelector('input[name="password"]');
+        const submitButton = document.querySelector('input[type="submit"]');
+        
+        // Add an event listener to the form
+        submitButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            const usernameValue = usernameInput.value;
+            const passwordValue = passwordInput.value;
+            alert(`Username: ${usernameValue}\nPassword: ${passwordValue}`);
+        });
+    </script>
+</body>
+</html>
